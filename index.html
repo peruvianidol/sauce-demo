@@ -1,0 +1,49 @@
+---
+layout: base
+title: The Sauce
+---
+
+<section>
+  <p>The Sauce is Provi’s bi-weekly(ish) tech talk series, where Provi engineers can share their knowledge, learn from each other and chat about the latest industry trends.</p>
+</section>
+
+<main class="fizz-flow-16">
+  <h2>Upcoming Schedule</h2>
+
+  {% for talk in events %}
+    <figure>
+      <img src="images/{{ talk.image }}" alt="{{ talk.title}}" height="150" width="150">
+      <figcaption>
+        <h3>{{ talk.title}}</h3>
+        <p>{{ talk.speaker }}</p>
+        <p>{{ talk.summary }}</p>
+        <p>{{ talk.date }}</p>
+      </figcaption>
+    </figure>
+  {% endfor %}
+  <p><a href="">Previous Talks</a></p>
+
+  <h2>Have a Talk Idea?</h2>
+
+  <form name="demo-form" netlify>
+    <label for="name">My name is</label>
+    <input type="text" name="name" placeholder="First & Last Name" id="name">
+
+    <label for="I want to">I want to</label>
+    <div>
+      <label>
+        <input type="radio" name="I want to" value="hear a talk">
+        <span>Hear a talk</span>
+      </label>
+      <label>
+        <input type="radio" name="I want to" value="give a talk">
+        <span>Give a talk</span>
+      </label>
+    </div>
+    <label for="about">About</label>
+    <input type="text" name="about" placeholder="Topic">
+    <button type="submit">Make it So</button>
+  </form>
+
+
+</main>
